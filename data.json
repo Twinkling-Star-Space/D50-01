@@ -29,15 +29,16 @@
             ]
         },
         {
-            "name":"C programmin",
+            "name":"C programming",
             "snippets":[
                 {
                     "title":"Write a C program to copy contents from one file to another. (By Diplal Thakur Barhi 50",
-                    "code":" #include <stdio.h> #include <stdlib.h> int main() { FILE *file1, *file2; char ch; // Open the first file in write mode file1 = fopen("file1.txt", "w"); if (file1 == NULL) { printf("Error opening file1.txt for writing!\n"); return 1; } // Write some data to the first file fprintf(file1, "Hello, this is a sample text written to file1.txt.\n"); fclose(file1); // Open the first file in read mode file1 = fopen("file1.txt", "r"); if (file1 == NULL) { printf("Error opening file1.txt for reading!\n"); return 1; } // Open the second file in write mode file2 = fopen("file2.txt", "w"); if (file2 == NULL) { printf("\nError opening file2.txt for writing!\n"); fclose(file1); return 1; } // Read data from the first file and write it to the second file while ((ch = fgetc(file1)) != EOF) { fputc(ch, file2); } printf("\nData has been copied from file1.txt to file2.txt successfully!\n"); file1 = fopen("file1.txt", "r"); if (file1 == NULL) { printf("Error opening file1.txt for reading!\n"); return 1; } file1 = fopen("file2.txt", "r"); if (file1 == NULL) { printf("Error opening file1.txt for reading!\n"); return 1; } // Close the files fclose(file1); fclose(file2); return 0; }",
-                    "outpuImage":"image copy.png ",
-                    "fileImage":"image.png",
+                    "code": "#include <stdio.h>\\n#include <stdlib.h>\\nint main() {\\n  FILE *file1, *file2;\\n  char ch;\\n  file1 = fopen(\\"file1.txt\\", \\"w\\");\\n if (file1 == NULL) {\\n printf(\\"Error opening file1.txt for writing!\\n\\");\\n    return 1;\\n  }\\n  fprintf(file1, \\"Hello, this is a sample text written to file1.txt.\\n\\");\\n  fclose(file1);\\n  file1 = fopen(\\"file1.txt\\", \\"r\\");\\n  if (file1 == NULL) {\\n    printf(\\"Error opening file1.txt for reading!\\n\\");\\n    return 1;\\n  }\\n  file2 = fopen(\\"file2.txt\\", \\"w\\");\\n  if (file2 == NULL) {\\n    printf(\\n\\"Error opening file2.txt for writing!\\n\\");\\n    fclose(file1);\\n    return 1;\\n  }\\n  while ((ch = fgetc(file1)) != EOF) {\\n    fputc(ch, file2);\\n  }\\n  printf(\\n\\"Data has been copied from file1.txt to file2.txt successfully!\\n\\");\\n  file1 = fopen(\\"file1.txt\\", \\"r\\");\\n  if (file1 == NULL) {\\n    printf(\\"Error opening file1.txt for reading!\\n\\");\\n    return 1;\\n  }\\n  file1 = fopen(\\"file2.txt\\", \\"r\\");\\n  if (file1 == NULL) {\\n    printf(\\"Error opening file1.txt for reading!\\n\\");\\n    return 1;\\n  }\\n  fclose(file1);\\n  fclose(file2);\\n  return 0;\\n}",
+                    "outputImage":"./assets/filehandling_ii/output50-01.png ",
+                    "fileImage":"./assets/filehandling_ii/image.png"
                 }
             ]
+
         }
     ]
 }
